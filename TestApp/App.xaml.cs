@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
 
 namespace TestApp
 {
@@ -30,7 +32,8 @@ namespace TestApp
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-        }
+			AppCenter.Start("affa6a4d-38ce-4730-83a0-9c94a295037b", typeof(Analytics));
+		}
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
